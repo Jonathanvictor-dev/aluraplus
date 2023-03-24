@@ -12,6 +12,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -34,7 +35,6 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
-
 }
 
 .container__caixa {
@@ -75,7 +75,7 @@ body {
     color: var(--cinza-secundario);
 }
 
-.secundario {
+.secundario, .terciario {
     align-items: center;
     margin: 0 10rem;
 }
@@ -101,9 +101,8 @@ body {
 
 .botao__secundario {
     display: inline-block;
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
-
 
 .dispositivos {
     margin: 9rem 0;
@@ -121,7 +120,6 @@ body {
     display: flex;
     justify-content: center;
     list-style: none;
-
 }
 
 .dispositivos__item {
@@ -142,7 +140,7 @@ body {
 }
 
 .rodape__logo {
-    margin: 2.5rem 0;
+    margin: 2rem 0;
 }
 
 .rodape__lista {
@@ -178,9 +176,14 @@ body {
 
 @media screen and (max-width: 768px) {
     .container {
+        height: auto;
         display: flex;
         flex-direction: column;
         background: none;
+    }
+
+    .principal {
+        margin: 0 0.5rem;
     }
 
     .container__caixa {
@@ -188,16 +191,44 @@ body {
     }
 
     .container__imagem {
-        width: 50vh;
+        width: 40vh;
     }
 
     .secundario {
-        margin: 0;
+        margin: 2rem 0.5rem;
         text-align: center;
     }
 
+    .terciario {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 2rem 0.5rem;
+        text-align: center;
+    }
+
+    .imagem__secundaria {
+        width: 40vh;
+    }
+
     .secundaria__imagem {
-        width: 50vh;
+        margin: 3rem 0;
+    }
+
+    .container__descricao {
+        margin: 2rem 0;
+    }
+
+    .botao__secundario {
+        margin-top: 2rem;
+    }
+
+    .descricao__titulo {
+        margin-top: 0;
+    }
+
+    .dispositivos {
+        margin: 0 0.5rem;
+        border-bottom: 1px solid var(--branco-principal);
     }
 
     .dispositivos__lista {
@@ -213,17 +244,23 @@ body {
         border: none;
     }
 
-    .dispositivos__texto {
-        /* rodape__item */
+    .rodape {
+        margin: 0 0.5rem;
     }
 
-    .rodape {
-        margin: 0;
+    .rodape__logo {
+        margin: 2rem 0.5rem;
     }
 
     .rodape__lista {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
+}
+
+@media screen and (max-width: 375px) {
+    .dispositivos {
+        display: none;
+    }
 }
