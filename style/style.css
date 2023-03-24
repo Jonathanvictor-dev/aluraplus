@@ -130,6 +130,7 @@ body {
 }
 
 .dispositivos__item:hover {
+    display: inline;
     border: 1px solid var(--branco-principal);
     cursor: pointer;
 }
@@ -172,6 +173,30 @@ body {
 
 .rodape__item__link:active {
     color: #9216f7;
+}
+
+@media screen and (max-width: 1000px) {
+    .botao__secundario {
+        text-align: center;
+    }
+
+    .dispositivos {
+        margin: 0 0.5rem;
+        border-bottom: 1px solid var(--branco-principal);
+    }
+
+    .dispositivos__lista {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dispositivos__item {
+        justify-content: center;
+    }
+
+    .dispositivos__item:hover {
+        border: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
