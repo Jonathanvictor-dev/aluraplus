@@ -16,4 +16,3 @@
 
 ### Jonathan Victor 
 
-### Linkedin: https://www.linkedin.com/school/aluracursos/
