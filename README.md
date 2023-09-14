@@ -12,7 +12,5 @@
 
 * MEDIA QUERIES
 
-## Feito por:
 
-### Jonathan Victor 
 
